@@ -23,7 +23,10 @@ header{
 
 main{
     padding: 20px;
-    margin-top: 30px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #input_tarefa{
@@ -31,7 +34,7 @@ main{
     font-size: 1.2em;
     border-radius: 20px;
     padding: 5px;
-    width: 400px;
+    width: 100%;
 
 
 }
@@ -78,4 +81,20 @@ footer{
     width: 100%;
     height: 200px;
     color: aliceblue;
+}
+
+.concluir{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+@media (max-width: 400px){
+    body{
+        font-size: 0.8em;
+
+    }
+
+    #input-tarefa{
+        width: 60%;
+    }
 }

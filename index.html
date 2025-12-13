@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="catalogo.css">
+</head>
+<body>
+    
+
+<header>
+    <button on="console.log('Mouse dentro do botão')" onclick="mudaCorDeFundo()" >Clique em mim</button>
+    <h1>Esse texto vai mudar de cor</h1>
+    <nav>
+        <a href="https://www.github.com/NicolasLeao12"></a>
+    </nav>
+</header>
+
+    <main>
+        
+        <select name="" id="">
+            <option value="red">vermelho</option>
+            <option value="blue">azul</option>
+            <option value="purple">roxo</option>
+            <option value="orange">laranja</option>
+            <option value="yellow">amarelo</option>
+            <option value="green">verde</option>
+            <option value="pink">rosa</option>
+        </select>
+        
+        <section id="catalogo">
+
+
+            <div class="produto" style="background-color: blue;" onclick="mudaCorBolinha(e)"></div>
+            <div class="produto" style="background-color: red;" onclick="mudaCorBolinha(e)"></div>
+            <div class="produto" style="background-color: purple;" onclick="mudaCorBolinha(e)"></div>
+            <div class="produto" style="background-color: orange;" onclick="mudaCorBolinha(e)"></div>
+            <div class="produto" style="background-color: yellow;" onclick="mudaCorBolinha(e)"></div>
+
+        </section> 
+
+
+        <section>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id fugiat perferendis dolor consequatur, soluta maxime unde modi in ea natus voluptatum repudiandae quos aspernatur quis! Assumenda, excepturi. Vero, odio est!
+            Nesciunt accusamus explicabo dolorem ipsum nemo autem, tenetur debitis nihil blanditiis quam, dolores sequi impedit reiciendis, quasi perferendis. Cumque laborum placeat hic incidunt suscipit, quaerat similique aliquam modi voluptatibus repudiandae.
+            Quas explicabo at deserunt eveniet ea impedit, beatae veritatis autem ullam officiis porro error nemo labore sint quam tempora eaque reprehenderit eos. Consectetur quo dolorum esse hic maiores quis! Inventore!
+            Nobis quam cumque dignissimos. Distinctio fuga quod, aliquid consequatur non nobis amet accusantium culpa eum nihil error nisi suscipit velit corporis officiis quos laborum rem sint natus! Perspiciatis, cupiditate tenetur.
+            Cupiditate neque natus, omnis qui tenetur dolorem explicabo. Quidem saepe expedita nulla fugiat maiores sunt pariatur illum ad. Ullam odit necessitatibus iste fugiat soluta quas voluptate odio cum est delectus.
+            Nihil pariatur, corrupti est distinctio ex tempore, deserunt mollitia repellat libero nostrum quam iste quasi esse culpa minus corporis molestiae autem quidem nesciunt sunt ipsam? Dicta animi dignissimos nesciunt soluta!
+            Fugiat beatae iure ea quos at nesciunt doloremque cupiditate, harum aliquam voluptatum quod numquam ad corrupti qui, eaque unde quis! Mollitia fuga debitis beatae eaque repudiandae laboriosam expedita quisquam veniam.
+            Quos pariatur minima, repudiandae aliquam optio sequi odio tempora quidem dolor aspernatur alias autem nihil? Ullam error rerum eum hic adipisci, consectetur vitae nam amet officia doloremque omnis molestias illum.
+            Esse iste veritatis minima distinctio exercitationem excepturi accusantium, tempora alias debitis. Mollitia possimus beatae magnam adipisci obcaecati amet eum expedita fugit corrupti laborum odio laboriosam optio perferendis voluptas, earum et!
+            Est doloribus temporibus vero! Sunt totam sed deleniti. Ipsam facere corrupti placeat iusto quidem veniam natus eveniet est similique, totam consequatur, unde aliquam consectetur, provident expedita animi ab explicabo voluptate.
+        </section>
+
+        <footer>
+
+        </footer>
+
+
+        <script>
+
+            let corEscura = false
+            function mudaCorDeFundo(){
+                if ( corEscura ){
+                    document.body.style.backgroundColor = "white"
+                    document.body.style.color = "black"
+                    corEscura = false
+                }else {
+                    document.body.style.backgroundColor = "black"
+                    document.body.style.color = "white"
+                    corEscura = true
+                } 
+            }            
+
+        </script>
+
+<script src="pintaBolinha.js"></script>
+
+    </main>
+
+
+
+
+
+
+</body>
+</html>

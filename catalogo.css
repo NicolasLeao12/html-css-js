@@ -1,0 +1,18 @@
+.produto{
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    border-radius: 100%;
+}
+
+#catalogo{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.produto:hover{
+    transform: scale(1.05);
+    transition: all 0.5s;
+}

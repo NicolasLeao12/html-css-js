@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <style>
+        body{
+            font-family: arial ; 
+            background-color: lime;
+            display: flex; 
+            justify-content: center; 
+            align-items: center ; 
+            height: 100; 
+            margin: 0;
+        }   
+        .container {
+            background: white ;
+            padding: 80px;  
+              border-radius: 12px ; 
+              text-align: center; 
+              width: 500px;
+          }
+     </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Adivinhe o Número (1 a 20)</h2>
+        <p id="mensagem">Você tem 5 tentativas</p>
+
+        <input type="number" id="palpite" placeholder="Digite um número">
+        <button id="botao">Tentar</button>
+        <button id="reiniciar">Reiniciar</button>
+    </div>
+
+    <script>
+        let numeroSecreto = Math.floor(Math.random()* 20) + 1;
+        let tentativas = 5;
+
+        let mensagem = document.getElementById("mensagem");
+        let input = document.getElementById("palpite");
+        let botao = document.getElementById("botao");
+        let reiniciar = document.getElementById("reiniciar");
+
+        botao.addEventListener("click",function(){
+            let palpite = parseInt(input.value);
+
+            if(!palpite){
+                mensagem.textContent = "Digite um número válido";
+                return
+            }
+            tentativas--;
+
+            if (palpite === numeroSecreto) {
+                mensagem.textContent = "Parabéns você acertou!"
+                botao.disabled = true
+            }
+            else if(tentativas === 0){
+                mensagem.textContent = "Fim de jogo o número era" + numeroSecreto;
+                botao.disabled = true;
+            }
+            else if(palpite < numeroSecreto){
+                mensagem.textContent = "Muito baixo, tentativas: " + tentativas;
+            }
+            else{
+                mensagem.textContent = "Muito alto, tentativas: " + tentativas;
+            }
+
+            input.value = '';
+        });
+
+        reiniciar.addEventListener("click",function(){
+            numeroSecreto = Math.floor(Math.random()* 20) + 1;
+            tentativas = 5;
+            mensagem.textContent = "Você tem 5 tentativas";
+            botao.disabled = false;
+            input.value = "";
+        })
+
+    </script>
+</body>
+</html>
